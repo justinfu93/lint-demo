@@ -7,8 +7,8 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx --fix",
-    "format": "prettier --write \"./**/*.{html,vue,ts,cjs,js,json,md}\"",
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.cjs --fix",
+    "format": "prettier --write \"./**/*.{html,vue,ts,cjs,js,json,md}\" --config ./.perttierrc.cjs",
     "lint:style": "stylelint \"./**/*.{css,scss,vue,html}\" --fix",
     "prepare": "husky install"
   },
@@ -18,6 +18,8 @@
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
     "@typescript-eslint/parser": "^5.54.0",
     "@vitejs/plugin-vue": "^4.0.0",
@@ -31,7 +33,6 @@
     "postcss-scss": "^4.0.6",
     "prettier": "^2.8.4",
     "stylelint": "^15.2.0",
-    "stylelint-config-prettier": "^9.0.5",
     "stylelint-config-recommended-scss": "^9.0.1",
     "stylelint-config-standard": "^30.0.1",
     "stylelint-config-standard-vue": "^1.0.0",
